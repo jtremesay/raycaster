@@ -1,0 +1,20 @@
+{
+    "files": [
+        "src/main.ts",
+        "src/camera.ts",
+        "src/drawer.ts",
+        "src/drawer_canvas.ts",
+        "src/drawer_multiplexer.ts",
+        "src/drawer_svg.ts",
+        "src/engine.ts",
+        "src/maths.ts",
+        "src/render.ts",
+        "src/scene.ts",
+        "src/sdf.ts",
+        "src/vector2.ts"
+    ],
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "target": "es5"
+    }
+}
