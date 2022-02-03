@@ -1,11 +1,3 @@
-import { Camera } from "./camera";
-import { Drawer } from "./drawer";
-import { render } from "./render";
-import { Scene } from "./scene";
-import { Vector2 } from "./vector2";
-import { CanvasDrawer } from "./drawer_canvas";
-import { DrawerMultiplexer } from "./drawer_multiplexer";
-import { SVGDrawer } from "./drawer_svg";
 import { Raycaster } from "./engine";
 
 
