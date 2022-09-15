@@ -68,7 +68,7 @@ export class Raycaster {
         drawer.drawers.push(new CanvasDrawer(canvas_ctx, canvas_size));
         this.output_size = canvas_size;
 
-        //drawer.drawers.push(new SVGDrawer(this.ui.svg_output, canvas_size));
+        drawer.drawers.push(new SVGDrawer(this.ui.svg_output, canvas_size));
         this.drawer = drawer;
 
         // Create the simulation state
