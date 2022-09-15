@@ -17,12 +17,12 @@ export class Camera {
      * @brief Construct a new camera
      * @param position Position of the camera. (default=Vector2.zero)
      * @param direction Direction of the camera. (default = north)
-     * @param fov Horizontal field of view, in radians (default=120°)
+     * @param fov Horizontal field of view, in radians (default=90`)
      */
     constructor(position?: Vector2, direction?: Vector2, fov?: number) {
         this.position = position !== undefined ? position : Vector2.zero();
         this.direction = direction !== undefined ? direction : new Vector2(0, -1);
-        this.fov = fov !== undefined ? fov : 2 * Math.PI / 3; // 120° = 2 Pi / 3
+        this.fov = fov !== undefined ? fov : Math.PI / 2; // 90° = Pi / 2
     }
 
     /**
