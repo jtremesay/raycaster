@@ -27,13 +27,13 @@ export class CanvasDrawer implements Drawer {
     }
 
     draw_ceil() {
-        this.ctx.fillStyle = "#a9a9a9";
+        this.ctx.fillStyle = "#797979";
         this.ctx.fillRect(0, 0, this.viewport_size.x, this.viewport_size.y / 2);
     }
 
 
-    draw_wall(column: number, height: number) {
-        this.ctx.fillStyle = "blue";
+    draw_wall(column: number, height: number, color: string) {
+        this.ctx.fillStyle = color;
         this.ctx.fillRect(column, this.viewport_size.y / 2 - height / 2, 1, height);
     }
 }

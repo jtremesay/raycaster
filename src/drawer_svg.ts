@@ -40,18 +40,18 @@ export class SVGDrawer implements Drawer {
         let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect") as unknown as SVGRectElement;
         rect.setAttribute("width", this.viewport_size.x.toString());
         rect.setAttribute("height", (this.viewport_size.y / 2).toString());
-        rect.setAttribute("fill", "#a9a9a9");
+        rect.setAttribute("fill", "#797979");
         this.root.appendChild(rect);
     }
 
 
-    draw_wall(column: number, height: number) {
+    draw_wall(column: number, height: number, color: string) {
         let rect = document.createElementNS("http://www.w3.org/2000/svg", "rect") as unknown as SVGRectElement;
         rect.setAttribute("x", column.toString());
         rect.setAttribute("y", ((this.viewport_size.y / 2) - (height / 2)).toString());
         rect.setAttribute("width", "1");
         rect.setAttribute("height", height.toString());
-        rect.setAttribute("fill", "blue");
+        rect.setAttribute("fill", color);
         this.root.appendChild(rect);
     }
 }

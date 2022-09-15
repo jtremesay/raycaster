@@ -22,5 +22,5 @@ export interface Drawer {
      * @param column 
      * @param height Height of the wall portion, in pixels
      */
-    draw_wall(column: number, height: number): void;
+    draw_wall(column: number, height: number, color: string): void;
 }

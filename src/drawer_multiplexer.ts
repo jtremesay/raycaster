@@ -33,9 +33,9 @@ export class DrawerMultiplexer implements Drawer {
         }
     }
 
-    draw_wall(column: number, height: number) {
+    draw_wall(column: number, height: number, color: string) {
         for (let drawer of this.drawers) {
-            drawer.draw_wall(column, height);
+            drawer.draw_wall(column, height, color);
         }
     }
 }

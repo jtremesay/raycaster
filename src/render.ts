@@ -72,6 +72,9 @@ export function render(scene: Scene, camera: Camera, drawer: Drawer, viewport_si
 
         // Only draw the segment if the wall is visible
         if (wall_distance > 0 && wall_distance < Infinity) {
+            // Compute the color
+            let color = `rgb(0, 0, ${255 - (2 * wall_distance) ** 2})`;
+
             // Try to map the sphere projection of the ray marching algo to
             // a planar one. Doesn't work for fov > 90°. Kind of work for fov >= 90°
             let angle_from_center = ray_direction.angle() - camera.direction.angle();
@@ -79,11 +82,13 @@ export function render(scene: Scene, camera: Camera, drawer: Drawer, viewport_si
 
             // Compute the scale ratio
             // the nearest, the biggest
-            let scale_ratio = 1.0 / wall_distance; // Basic perspective transformation
+            let scale_ratio = 1.0 / wall_distance; // Basic persupective transformation
 
             // Compute the final height and do the the drawing
             let wall_height = viewport_size.y * scale_ratio;
-            drawer.draw_wall(column, wall_height);
+
+
+            drawer.draw_wall(column, wall_height, color);
         }
     }
 }
